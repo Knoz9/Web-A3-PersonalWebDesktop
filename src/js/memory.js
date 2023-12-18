@@ -18,7 +18,9 @@ export function loadMemoryGame(container) {
   let attempts = 0;
   const attemptsDisplay = document.createElement('div');
   const flipSound = new Audio(flipSoundSrc);
+  flipSound.preload = 'auto';
   const poofSound = new Audio(poofSoundSrc);
+  poofSound.preload = 'auto';
   attemptsDisplay.className = 'attempts-display';
   attemptsDisplay.textContent = `Game finished in: ${attempts} attempts`;
 
