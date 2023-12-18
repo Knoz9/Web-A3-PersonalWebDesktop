@@ -1,4 +1,12 @@
-
+import backImage from '../img/memory/back.png';
+import image1 from '../img/memory/1.png';
+import image2 from '../img/memory/2.png';
+import image3 from '../img/memory/3.png';
+import image4 from '../img/memory/4.png';
+import image5 from '../img/memory/5.png';
+import image6 from '../img/memory/6.png';
+import image7 from '../img/memory/7.png';
+import image8 from '../img/memory/8.png';
 /**
  * Loads and initializes the memory game in the specified container.
  * @param {HTMLElement} container - The container element.
@@ -103,7 +111,8 @@ export function loadMemoryGame(container) {
 
     if (cell.dataset.flipped === 'false') {
       flipSound.play();
-      cell.style.backgroundImage=`url('img/memory/${parseInt(imageId)+1}.png')`;
+      const imageMap = [image1, image2, image3, image4, image5, image6, image7, image8];
+      cell.style.backgroundImage = `url('${imageMap[parseInt(imageId)]}')`;
       cell.dataset.flipped = 'true';
 
       if (firstChoice === null) {
@@ -306,8 +315,8 @@ export function loadMemoryGame(container) {
       }
     } else {
       setTimeout(() => {
-        firstCell.style.backgroundImage = `url('img/memory/back.png')`;
-        secondCell.style.backgroundImage = `url('img/memory/back.png')`;
+        firstCell.style.backgroundImage = `url('${backImage}')`;
+        secondCell.style.backgroundImage = `url('${backImage}')`;
         firstCell.dataset.flipped = 'false';
         secondCell.dataset.flipped = 'false';
         isChecking = false;

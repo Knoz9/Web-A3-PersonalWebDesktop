@@ -2,6 +2,11 @@ import {openTaskManager} from './taskManager.js';
 import {openYouTubeApp} from './youtubePlayer.js';
 import {openChatApp} from './chat.js';
 import {loadMemoryGame} from './memory.js';
+import memoryGameIcon from '../img/memory.png';
+import chatIcon from '../img/messages.png';
+import youtubeIcon from '../img/youtube.png';
+import taskManagerIcon from '../img/taskManager.png';
+
 
 document.addEventListener('DOMContentLoaded', () => {
   let isFirstWindow = true;
@@ -31,16 +36,16 @@ document.addEventListener('DOMContentLoaded', () => {
     let iconSrc;
     switch (appName) {
       case 'Memory Game':
-        iconSrc = 'img/memory.png';
+        iconSrc = memoryGameIcon;
         break;
       case 'Messages':
-        iconSrc = 'img/messages.png';
+        iconSrc = chatIcon;
         break;
       case 'Youtube':
-        iconSrc = 'img/youtube.png';
+        iconSrc = youtubeIcon;
         break;
       case 'Task Manager':
-        iconSrc = 'img/taskManager.png'; // Path to your task manager icon
+        conSrc = taskManagerIcon;
         break;
     }
     const desktop = document.getElementById('desktop');
