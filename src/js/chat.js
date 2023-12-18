@@ -41,6 +41,7 @@ export function openChatApp(container) {
 
     const messageInput = document.createElement('textarea');
     messageInput.className = 'message-input';
+    messageInput.placeholder = 'iMessage';
 
     const sendButton = document.createElement('button');
     sendButton.textContent = 'Send';
