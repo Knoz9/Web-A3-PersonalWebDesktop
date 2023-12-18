@@ -1,3 +1,5 @@
+import sendSoundSrc from '../audio/sentMessage.mp3';
+import receiveSoundSrc from '../audio/recievedMessage.mp3';
 /**
  * Opens the chat application in the specified container.
  * If a username is stored in the local storage, it initializes the chat.
@@ -6,9 +8,8 @@
  */
 export function openChatApp(container) {
   let username = localStorage.getItem('chatUsername');
-  const sendSound = new Audio('audio/sentMessage.mp3');
-  const receiveSound = new Audio('audio/recievedMessage.mp3');
-
+  const sendSound = new Audio(sendSoundSrc);
+  const receiveSound = new Audio(receiveSoundSrc);
   /**
    * Initializes the chat functionality.
    */

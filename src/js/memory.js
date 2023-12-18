@@ -7,6 +7,9 @@ import image5 from '../img/memory/5.png';
 import image6 from '../img/memory/6.png';
 import image7 from '../img/memory/7.png';
 import image8 from '../img/memory/8.png';
+import flipSoundSrc from '../audio/flip.mp3';
+import poofSoundSrc from '../audio/poof.mp3';
+
 /**
  * Loads and initializes the memory game in the specified container.
  * @param {HTMLElement} container - The container element.
@@ -14,8 +17,8 @@ import image8 from '../img/memory/8.png';
 export function loadMemoryGame(container) {
   let attempts = 0;
   const attemptsDisplay = document.createElement('div');
-  const flipSound = new Audio('audio/flip.mp3');
-  const poofSound = new Audio('audio/poof.mp3');
+  const flipSound = new Audio(flipSoundSrc);
+  const poofSound = new Audio(poofSoundSrc);
   attemptsDisplay.className = 'attempts-display';
   attemptsDisplay.textContent = `Game finished in: ${attempts} attempts`;
 
@@ -111,7 +114,10 @@ export function loadMemoryGame(container) {
 
     if (cell.dataset.flipped === 'false') {
       flipSound.play();
-      const imageMap = [image1, image2, image3, image4, image5, image6, image7, image8];
+      const imageMap = [
+        image1, image2, image3, image4,
+        image5, image6, image7, image8,
+      ];
       cell.style.backgroundImage = `url('${imageMap[parseInt(imageId)]}')`;
       cell.dataset.flipped = 'true';
 
