@@ -52,7 +52,7 @@ export function openChatApp(container) {
           type: 'message',
           data: message,
           username: username,
-          channel: 'myChannel',
+          channel: 'KenanA3',
           key: apiKey,
         }));
         messageInput.value = '';

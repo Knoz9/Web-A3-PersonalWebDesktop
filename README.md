@@ -1,6 +1,44 @@
-GitHub Copilot: # Project Title
+# Web Personal Web Desktop
 
 This project is a simple desktop-like interface in the browser where you can open and interact with different applications like a Memory Game, a Chat application, a YouTube player, and a Task Manager.
+
+## Live Demo
+
+You can view a live demo of the project here: [Live Demo](https://km-macosdesktop.netlify.app)
+
+## Screenshots
+
+Here are some screenshots of the desktop and its applications:
+
+### Desktop
+
+<img src="./img/desktop_screenshot.png" alt="Desktop Screenshot" width="500">
+
+The desktop interface with application icons.
+
+### Memory Game
+
+<img src="./img/memory_game_screenshot.png" alt="Memory Game Screenshot" width="300">
+
+The Memory Game application.
+
+### Chat Application
+
+<img src="./img/chat_app_screenshot.png" alt="Chat Application Screenshot" width="300">
+
+The Chat application.
+
+### Task Manager
+
+<img src="./img/task_manager_screenshot.png" alt="Task Manager Screenshot" width="300">
+
+The Task Manager application.
+
+### YouTube Player
+
+<img src="./img/youtube_player_screenshot.png" alt="YouTube Player Screenshot" width="300">
+
+The YouTube Player application.
 
 ## Getting Started
 
@@ -18,7 +56,7 @@ This project runs in the browser, so no special prerequisites are required.
    ```
 2. Open `index.html` in your browser
 
-## Usage
+## Usage & Features
 
 ### Desktop
 Click on the icons on the desktop to open the corresponding application. You can drag the windows around and close them.
@@ -101,45 +139,13 @@ The YouTube player allows users to load and play YouTube videos within the appli
 - The YouTube player supports all standard YouTube video features, including autoplay, encrypted media, gyroscope, and picture-in-picture.
 - The YouTube player also supports fullscreen mode (although outside of the PWD)
 
-## Screenshots
-
-Here are some screenshots of the application:
-
-### Desktop
-
-<img src="./img/desktop_screenshot.png" alt="Desktop Screenshot" width="500">
-
-The desktop interface with application icons.
-
-### Memory Game
-
-<img src="./img/memory_game_screenshot.png" alt="Memory Game Screenshot" width="300">
-
-The Memory Game application.
-
-### Chat Application
-
-<img src="./img/chat_app_screenshot.png" alt="Chat Application Screenshot" width="300">
-
-The Chat application.
-
-### Task Manager
-
-<img src="./img/task_manager_screenshot.png" alt="Task Manager Screenshot" width="300">
-
-The Task Manager application.
-
-### YouTube Player
-
-<img src="./img/youtube_player_screenshot.png" alt="YouTube Player Screenshot" width="300">
-
-The YouTube Player application.
-
 ## Code Overview
 
 The main script (`script.js`) listens for the `DOMContentLoaded` event and then sets up event listeners on the application icons. When an icon is clicked, it opens the corresponding application in a new window.
 
+Each application has its own `.js` file. When an application is opened, its script is run inside the window.
+
 The windows can be dragged around the desktop and closed. The position of each new window is calculated based on the position of the last window.
 
 ## NOTE
-All images are owned by me except for the messages icon, desktop background and sound files for messages. All of these are from macOS, and are used purely for educational purposes (fair use). It is to style it to look like macOS running in a browser.
+All assets are owned by me except for the messages icon, desktop background and sound files for messages. All of these are from macOS, and are used purely for educational purposes (fair use). It is to style it to look like macOS running in a browser.
