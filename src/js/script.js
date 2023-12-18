@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
         iconSrc = youtubeIcon;
         break;
       case 'Task Manager':
-        conSrc = taskManagerIcon;
+        iconSrc = taskManagerIcon;
         break;
     }
     const desktop = document.getElementById('desktop');
