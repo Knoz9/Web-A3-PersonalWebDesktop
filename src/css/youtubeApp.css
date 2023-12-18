@@ -1,0 +1,40 @@
+.youtube-url-input {
+    width: calc(95% - 20px); /* Adjust width considering padding */
+    padding: 10px;
+    margin: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.youtube-load-button {
+    width: calc(100% - 20px);
+    padding: 10px;
+    background-color: #f00;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    display: block; 
+    margin: 0 auto; 
+    margin-bottom: 10px;
+}
+
+.youtube-iframe {
+    width: 100%;
+    height: 315px;
+}
+
+
+
+
+
+
+
+
+
+

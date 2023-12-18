@@ -1,0 +1,43 @@
+.app-group {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 5px;
+}
+
+.app-group-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 5px 10px;
+    background-color: #f0f0f0;
+}
+
+.app-group-label:hover {
+    background-color: #e0e0e0;
+}
+
+.task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.task-list li {
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.task-list li:hover {
+    background-color: #f0f0f0;
+}
+
+.task-close-button {
+    padding: 2px 5px;
+    margin-left: 10px;
+    cursor: pointer;
+}

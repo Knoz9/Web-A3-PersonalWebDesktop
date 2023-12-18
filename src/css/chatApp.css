@@ -1,0 +1,86 @@
+/* Chat container */
+.message-display {
+    width: 95%;
+    height: 300px; /* Adjust as needed */
+    overflow-y: auto;
+    padding: 10px;
+    background-color: #e5e5ea; /* Light gray background */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%);
+}
+
+/* Input area */
+.message-input {
+    width: calc(95% - 20px); /* Adjust width to consider padding */
+    height: 50px; /* Adjust as needed */
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    resize: none; /* Disable resizing */
+}
+
+/* Message styling */
+.message-display p {
+    background-color: #218cff; /* Blue color for sent messages */
+    color: white;
+    padding: 10px 15px;
+    border-radius: 18px;
+    line-height: 1.4;
+    max-width: 60%;
+    word-break: break-word;
+    margin: 5px 0;
+    display: inline-block;
+    position: relative;
+    clear: both;
+}
+
+/* Different style for messages from others */
+.message-display p.others {
+    background-color: #f0f0f0; /* Light color for received messages */
+    color: black;
+    float: left;
+}
+
+/* Aligning messages */
+
+.message-display p.self {
+    float: right;
+}
+
+/* Username styling */
+.message-display b {
+    font-size: 0.8em;
+    color: #61696f; /* Dim color for usernames */
+    display: block;
+    margin-bottom: 3px;
+}
+
+.username-input {
+    width: calc(95% - 20px); /* Adjust width considering padding */
+    padding: 10px;
+    margin: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.chat-button {
+    width: calc(100% - 20px); /* Adjust width considering padding */
+    padding: 10px;
+    background-color: #007aff; /* Blue color */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    display: block; /* Makes the button center-aligned */
+    margin: 0 auto; /* Center the button */
+}
+
+.chat-button:hover {
+    background-color: #0051a8;
+}
