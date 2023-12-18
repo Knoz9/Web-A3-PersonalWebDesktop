@@ -17,10 +17,10 @@ import poofSoundSrc from '../audio/poof.mp3';
 export function loadMemoryGame(container) {
   let attempts = 0;
   const attemptsDisplay = document.createElement('div');
-  const flipSound = new Audio(flipSoundSrc);
-  flipSound.preload = 'auto';
-  const poofSound = new Audio(poofSoundSrc);
-  poofSound.preload = 'auto';
+  const playSound = (soundSrc) => {
+    const sound = new Audio(soundSrc);
+    sound.play();
+  };
   attemptsDisplay.className = 'attempts-display';
   attemptsDisplay.textContent = `Game finished in: ${attempts} attempts`;
 
@@ -115,7 +115,7 @@ export function loadMemoryGame(container) {
     const imageId = cell.dataset.imageId;
 
     if (cell.dataset.flipped === 'false') {
-      flipSound.play();
+      playSound(flipSoundSrc); // for playing flip sound
       const imageMap = [
         image1, image2, image3, image4,
         image5, image6, image7, image8,
@@ -312,7 +312,7 @@ export function loadMemoryGame(container) {
         firstCell.style.visibility = 'hidden';
         secondCell.style.visibility = 'hidden';
         isChecking = false;
-        poofSound.play();
+        playSound(poofSoundSrc); // for playing poof sound
       }, 1000);
       matches++;
       if (matches * 2 === cells.length) {
