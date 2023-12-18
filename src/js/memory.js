@@ -82,7 +82,7 @@ export function loadMemoryGame(container) {
       cell.dataset.flipped = 'false';
       cell.style.border = '1px solid black';
       cell.style.minHeight = '100px';
-      cell.style.backgroundImage = `url('img/memory/back.png')`;
+      cell.style.backgroundImage = backImage;
       cell.style.backgroundSize = 'cover';
       cell.tabIndex = 0;
       cell.addEventListener('keydown', (event) => {
