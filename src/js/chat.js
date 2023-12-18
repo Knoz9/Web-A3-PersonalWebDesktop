@@ -8,8 +8,10 @@ import receiveSoundSrc from '../audio/recievedMessage.mp3';
  */
 export function openChatApp(container) {
   let username = localStorage.getItem('chatUsername');
-  const sendSound = new Audio(sendSoundSrc);
-  const receiveSound = new Audio(receiveSoundSrc);
+  const playSound = (soundSrc) => {
+    const sound = new Audio(soundSrc);
+    sound.play();
+  };
   /**
    * Initializes the chat functionality.
    */
@@ -27,7 +29,7 @@ export function openChatApp(container) {
         }
         updateMessagesDisplay();
         if (message.username !== username) {
-          receiveSound.play();
+          playSound(receiveSoundSrc);
         }
       }
     };
@@ -54,7 +56,7 @@ export function openChatApp(container) {
           key: apiKey,
         }));
         messageInput.value = '';
-        sendSound.play();
+        playSound(sendSoundSrc);
       }
     });
 
