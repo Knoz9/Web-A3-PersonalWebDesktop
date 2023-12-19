@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kenan's PWD</title>
+    <link rel="stylesheet" href="css/statusbar.css">
     <link rel="stylesheet" href="css/desktop.css">
     <link rel="stylesheet" href="css/memoryGame.css">
     <link rel="stylesheet" href="css/chatApp.css">
@@ -14,14 +15,23 @@
 </head>
 <body>
     <div id="desktop">
+        <div id="status-bar"></div>
         <div id="dock">
-            <div id="memory-game-icon" class="icon" title="Memory Game"></div>
-            <div id="chat-icon" class="icon" title="Messages"></div>
-            <div id="youtube-icon" class="icon" title="Youtube"></div>
-            <div id="task-icon" class="icon" title="Task Manager"></div>
+            <div class="icon-container" id="memory-game-icon" title="Memory Game">
+                <div class="icon" style="background-image: url('../img/memory.png');"></div>
+              </div>
+            <div class="icon-container" id="chat-icon" title="Messages">
+                <div class="icon" style="background-image: url('../img/messages.png');"></div>
+              </div>
+            <div class="icon-container" id="youtube-icon" title="Youtube Player">
+                <div class="icon" style="background-image: url('../img/youtube.png');"></div>
+              </div>
+            <div class="icon-container" id="task-icon" title="Task Manager">
+                <div class="icon" style="background-image: url('../img/taskManager.png');"></div>
+              </div>
         </div>
     </div>
-
+    <script type="module" src="js/statusbar.js"></script>
     <script type="module" src="js/taskManager.js"></script>
     <script type="module" src="js/youtubePlayer.js"></script>
     <script type="module" src="js/memory.js"></script>

@@ -25,8 +25,15 @@ document.addEventListener('DOMContentLoaded', () => {
    * @param {string} app - The name of the application.
    */
   function addListener(id, app) {
-    const element = document.getElementById(id);
-    element.addEventListener('click', () => openApplication(app));
+    const container = document.getElementById(id);
+    const icon = container.querySelector('.icon');
+    container.addEventListener('click', () => {
+      openApplication(app);
+      icon.classList.add('jumping');
+    });
+    icon.addEventListener('animationend', () => {
+      icon.classList.remove('jumping');
+    });
   }
   /**
    * Opens an application window based on the provided app name.
@@ -65,16 +72,24 @@ document.addEventListener('DOMContentLoaded', () => {
     switch (appName) {
       case 'Memory Game':
         loadMemoryGame(contentContainer);
+        windowElement.style.zIndex = ++currentZIndex;
+        updateActiveWindowTitle();
         break;
       case 'Messages':
         openChatApp(contentContainer);
+        windowElement.style.zIndex = ++currentZIndex;
+        updateActiveWindowTitle();
         break;
       case 'Youtube':
         openYouTubeApp(contentContainer);
         windowElement.style.width = '500px';
+        windowElement.style.zIndex = ++currentZIndex;
+        updateActiveWindowTitle();
         break;
       case 'Task Manager':
         openTaskManager(contentContainer);
+        windowElement.style.zIndex = ++currentZIndex;
+        updateActiveWindowTitle();
         break;
     }
 
@@ -127,6 +142,23 @@ document.addEventListener('DOMContentLoaded', () => {
       window.addEventListener('mousemove', dragWindow);
       event.preventDefault();
       windowElement.style.zIndex = ++currentZIndex; // Increment.
+      updateActiveWindowTitle();
+    }
+
+    /**
+     * Updates the title of the active window based on the z.
+     */
+    function updateActiveWindowTitle() {
+      let maxZ = 0;
+      let activeTitle = '';
+      document.querySelectorAll('.window').forEach((window) => {
+        const zIndex = parseInt(window.style.zIndex, 10) || 0;
+        if (zIndex > maxZ) {
+          maxZ = zIndex;
+          activeTitle = window.querySelector('.window-header').textContent;
+        }
+      });
+      document.getElementById('active-window').textContent = activeTitle;
     }
 
     /**
@@ -155,6 +187,7 @@ document.addEventListener('DOMContentLoaded', () => {
     closeButton.addEventListener('click', function() {
       windowElement.style.zIndex = 0;
       windowElement.remove();
+      updateActiveWindowTitle();
     });
   }
 });

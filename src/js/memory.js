@@ -1,3 +1,4 @@
+import bannerImage from '../img/memory/banner.png';
 import backImage from '../img/memory/back.png';
 import image1 from '../img/memory/1.png';
 import image2 from '../img/memory/2.png';
@@ -159,32 +160,70 @@ export function loadMemoryGame(container) {
   }
 
   /**
+   * Adds a header element with the specified text to the container.
+   * @param {string} text - The text to be displayed in the header.
+   */
+  function addHeader(text) {
+    const h2 = document.createElement('h2');
+    h2.textContent = text;
+    h2.className = 'game-title';
+    container.appendChild(h2);
+  }
+  /**
    * Creates the size selection UI and adds event listeners to the buttons.
    */
   function createSizeSelection() {
+    const banner = document.createElement('img');
+    banner.src = bannerImage;
+    banner.className = 'memory-banner';
+    banner.alt = 'Memory Game Banner';
     const sizeSelection = document.createElement('div');
     sizeSelection.className = 'size-selection';
-
     const sizes = [
       {label: '4x4', value: {rows: 4, columns: 4}},
       {label: '2x4', value: {rows: 2, columns: 4}},
       {label: '2x2', value: {rows: 2, columns: 2}},
     ];
-
-    sizes.forEach((size) => {
+    sizes.forEach((size, index) => {
       const button = document.createElement('button');
       button.textContent = size.label;
+      button.tabIndex = 0; // Make the button focusable
       button.addEventListener('click', () => {
         startGame(size.value.rows, size.value.columns);
       });
+      button.addEventListener('keydown', (event) => {
+        handleSizeButtonKeyPress(event, index, sizes.length);
+      });
       sizeSelection.appendChild(button);
     });
-
-    container.innerHTML = `
-  <h2 class="game-title">Welcome!</h2>
-  <h2 class="game-title">Please Choose Size:</h2>
-    `;
+    container.innerHTML = ''; // Clear the container
+    container.appendChild(banner); // Add the banner to the container
+    addHeader('Please Choose Size:');
     container.appendChild(sizeSelection);
+  }
+  /**
+   * Handles key press events for size buttons.
+   * @param {Event} event - The key press event.
+   * @param {number} currentIndex - The current index of the button.
+   * @param {number} totalButtons - The total number of buttons.
+   */
+  function handleSizeButtonKeyPress(event, currentIndex, totalButtons) {
+    const key = event.key;
+    let newIndex;
+    switch (key) {
+      case 'ArrowRight':
+        newIndex = (currentIndex + 1) % totalButtons;
+        break;
+      case 'ArrowLeft':
+        newIndex = (currentIndex - 1 + totalButtons) % totalButtons;
+        break;
+      default:
+        return; // Ignore other keys
+    }
+    const buttons = container.querySelectorAll('.size-selection button');
+    if (buttons[newIndex]) {
+      buttons[newIndex].focus();
+    }
   }
 
   /**

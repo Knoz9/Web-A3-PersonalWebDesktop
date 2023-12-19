@@ -10,11 +10,24 @@ You can view a live demo of the project here: [Live Demo](https://km-macosdeskto
 
 Here are some screenshots of the desktop and its applications:
 
-### Desktop
+### Full screenshot of the App:
 
-<img src="./img/desktop_screenshot.png" alt="Desktop Screenshot" width="500">
+<img src="./img/app_screenshot.png" alt="app Screenshot" width="500">
 
-The desktop interface with application icons.
+Full screenshot of the app with memory game open
+
+
+### Dock
+
+<img src="./img/dock_screenshot.png" alt="Dock Screenshot" width="500">
+
+The dock interface with application icons.
+
+### Status bar
+
+<img src="./img/statusbar_screenshot.png" alt="app Screenshot" width="500">
+
+The status bar when memory game is open. We are also hovering our mouse over the battery to see the percentage.
 
 ### Memory Game
 
@@ -58,8 +71,27 @@ This project runs in the browser, so no special prerequisites are required.
 
 ## Usage & Features
 
-### Desktop
-Click on the icons on the desktop to open the corresponding application. You can drag the windows around and close them.
+### Status bar
+
+#### How to Use/Features:
+- When an app is open, just like on macOS, the app name is displayed in the top left.
+
+- It displays the current date and time at the far right
+
+- It also shows the current battery percentage in an icon, and if you hover over it, we can see the percentage in numbers.
+
+- The battery defaults to 100% if we can't read the battery due to privacy or if the device does not have a battery to read.
+
+### Dock
+
+#### How to Use/Features:
+- Click on the icons in the dock to open the corresponding application. 
+
+- You can drag the windows around and close them. When multiple windows are open, they stack on top of each other. 
+
+- You can focus on any window by clicking its draggable bar, which will bring it to the front of the stack.
+
+- Also, we have some animations in the dock, and the app name is shown when hovering over an icon.
 
 ### Memory game
 
@@ -101,11 +133,11 @@ The chat application mimics the iMessage interface, displaying chat bubbles in d
 - The chat interface includes a message display area, a message input field, and a send button. The message display area automatically updated to show new messages.
 - The application keeps track of the last 20 messages and displays them in the message display area.
 
-## Task Manager
+### Task Manager
 
 The task manager provides an overview of all currently open windows in the application, grouped by their respective applications. It allows users to close individual windows or all windows of a specific application at once.
 
-### How to Use
+#### How to Use
 
 1. Click on the Task Manager icon to open the task manager.
 2. The task manager interface displays a list of all open windows, grouped by application. Each group shows the name of the application and the number of open windows.
@@ -113,7 +145,7 @@ The task manager provides an overview of all currently open windows in the appli
 4. Each window in the list has a "Close" button that can be used to close the individual window.
 5. Each application group also has a "Close All" button that can be used to close all windows of that application.
 
-### Features
+#### Features
 
 - The task manager automatically updates every second to reflect the current state of the application.
 - The task manager groups open windows by application, making it easy to see how many windows each application has open.
@@ -121,17 +153,17 @@ The task manager provides an overview of all currently open windows in the appli
 - The task manager remembers the expanded/collapsed state of each application group, so if a group was expanded the last time the task manager was updated, it will remain expanded 
 in the next update.
 
-## YouTube Player
+### YouTube Player
 
 The YouTube player allows users to load and play YouTube videos within the application.
 
-### How to Use
+#### How to Use
 
 1. Click on the YouTube Player icon to open the YouTube player.
 2. Enter a YouTube video URL into the input field.
 3. Click the "Load Video" button to load the video. The video will be displayed in an iframe below the input field and button.
 
-### Features
+#### Features
 
 - The YouTube player supports any YouTube video URL. It extracts the video ID from the URL and uses it to load the video.
 - The YouTube player uses an iframe to display the video, allowing users to watch the video without leaving the application.
@@ -143,9 +175,9 @@ The YouTube player allows users to load and play YouTube videos within the appli
 
 The main script (`script.js`) listens for the `DOMContentLoaded` event and then sets up event listeners on the application icons. When an icon is clicked, it opens the corresponding application in a new window.
 
-Each application has its own `.js` file. When an application is opened, its script is run inside the window.
-
-The windows can be dragged around the desktop and closed. The position of each new window is calculated based on the position of the last window.
+Each application has its own `.js` file. When an application is opened, its script is run inside the window. The status bar is also in its own `.js` file which loads the status bar seperatly from everything else.
 
 ## NOTE
-All assets are owned by me except for the messages icon, desktop background and sound files for messages. All of these are from macOS, and are used purely for educational purposes (fair use). It is to style it to look like macOS running in a browser.
+All assets are owned by me except for the messages icon, desktop background, apple logo in the top left and sound files for messages. All of these are from macOS, and are used purely for educational purposes (fair use). It is to style it to look like macOS running in a browser. 
+
+Sound effects for memory app are taken from youtube.
