@@ -43,28 +43,36 @@ export function openChatApp(container) {
     messageInput.className = 'message-input';
     messageInput.placeholder = 'iMessage';
 
-    const sendButton = document.createElement('button');
-    sendButton.textContent = 'Send';
-    sendButton.className = 'chat-button';
-    sendButton.addEventListener('click', () => {
-      const message = messageInput.value.trim();
-      if (message) {
-        websocket.send(JSON.stringify({
-          type: 'message',
-          data: message,
-          username: username,
-          channel: 'KenanA3',
-          key: apiKey,
-        }));
-        messageInput.value = '';
-        playSound(sendSoundSrc);
+    // Add event listeners for dynamic resizing
+    messageInput.addEventListener('input', function() {
+      const previousHeight = messageInput.clientHeight;
+      messageInput.style.height = 'auto';
+      const newHeight = messageInput.scrollHeight;
+      if (newHeight < previousHeight || newHeight > previousHeight) {
+        messageInput.style.height = newHeight + 'px';
+        messageDisplay.style.height = messageDisplay.style.height - newHeight + 'px';
       }
     });
-
+    messageInput.addEventListener('keydown', function(event) {
+      if (event.key === 'Enter' && !event.shiftKey) {
+        event.preventDefault(); // Prevent the default newline
+        messageInput.style.height = 'auto';
+        const message = messageInput.value.trim();
+        if (message) {
+          websocket.send(JSON.stringify({
+            type: 'message',
+            data: message,
+            username: username,
+            channel: 'KenanA3',
+            key: apiKey,
+          }));
+          messageInput.value = '';
+          playSound(sendSoundSrc);
+        }
+      }
+    });
     container.appendChild(messageDisplay);
     container.appendChild(messageInput);
-    container.appendChild(sendButton);
-
     /**
      * Updates the display of messages.
      */
