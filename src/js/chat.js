@@ -50,7 +50,6 @@ export function openChatApp(container) {
       const newHeight = messageInput.scrollHeight;
       if (newHeight < previousHeight || newHeight > previousHeight) {
         messageInput.style.height = newHeight + 'px';
-        messageDisplay.style.height = messageDisplay.style.height - newHeight + 'px';
       }
     });
     messageInput.addEventListener('keydown', function(event) {

@@ -120,7 +120,7 @@ The chat application mimics the iMessage interface, displaying chat bubbles in d
 
 1. Click on the Messages icon to start the chat application.
 2. If a username is stored in the local storage, the chat will initialize. If not, you will be prompted to enter a username. This username will be stored in the local storage for future sessions.
-3. Once the chat is initialized, you can type messages into the input field and press the "Send" button to send them. Messages you send will appear on the right side of the chat interface in blue bubbles.
+3. Once the chat is initialized, you can type messages into the input field and then press enter to send them. Messages you send will appear on the right side of the chat interface in blue bubbles.
 4. Messages received from others will appear on the left side of the chat interface in gray bubbles.
 5. Sound effects will play when messages are sent and received.
 
