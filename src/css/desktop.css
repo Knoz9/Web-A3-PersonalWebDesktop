@@ -33,6 +33,22 @@ body, html {
     padding: 0 20px; /* Added padding */
 }
 
+.icon-memory {
+    background-image: url('../img/memory.png');
+}
+
+.icon-chat {
+    background-image: url('../img/messages.png');
+}
+
+.icon-youtube {
+    background-image: url('../img/youtube.png');
+}
+
+.icon-taskmanager {
+    background-image: url('../img/taskManager.png');
+}
+
 @keyframes jump {
     0%, 100% {
       transform: translateY(0);
