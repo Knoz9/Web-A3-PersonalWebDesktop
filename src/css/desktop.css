@@ -181,7 +181,8 @@ body, html {
     opacity: 1;
 }
 
-@media screen and (width <= 600px) {
+/* stylelint-disable-next-line media-feature-range-notation */
+@media screen and (max-width: 600px) {
     #dock {
         height: 80px;
     }
