@@ -196,6 +196,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const closeButton = windowElement.querySelector('.close-button');
     closeButton.addEventListener('click', function() {
+      wasLastWindowMoved = true;
       windowElement.style.zIndex = 0;
       windowElement.remove();
       updateActiveWindowTitle();
