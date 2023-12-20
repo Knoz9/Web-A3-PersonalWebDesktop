@@ -13,7 +13,7 @@ body, html {
     background-image: url('/img/background-image.jpg'); /* Added this */
     background-size: cover; 
     background-repeat: no-repeat; 
-    background-position: center; 
+    background-position: center;
 }
 
 #dock {
@@ -181,3 +181,14 @@ body, html {
     opacity: 1;
 }
 
+@media screen and (width <= 600px) {
+    #dock {
+        height: 80px;
+    }
+
+    .icon-container {
+        width: 45px;
+        height: 45px;
+        margin: 0 5px;
+    }
+}
