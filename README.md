@@ -43,7 +43,11 @@ The status bar when memory game is open. We are also hovering our mouse over the
 
 ### Calculator Application
 
-<img src="./img/calculator_screenshot.png" alt="Task Manager Screenshot" width="300">
+<img src="./img/calculator_screenshot.png" alt="Calculator Screenshot" width="300">
+
+### Game Center
+
+<img src="./img/game_center_screenshot.png" alt="Game Center Screenshot" width="300">
 
 ### YouTube Player
 
@@ -168,6 +172,23 @@ The Calculator app allows users to perform basic calculations, including additio
 -  Displays an error message in case of invalid input or calculation errors.
 - A 9 character limit is in place to prevent digits from going out of frame
 
+### Game Center
+
+Game Center app is your destination for playing embedded HTML games directly in your web browser. With three games available, the interface automatically adjusts to the size of each game for a tailored experience.
+
+#### How to Use
+
+1. Click on the Game Center icon to open the app.
+2. Select from the available games by clicking on their preview.
+3. The game loads directly in the window, which resizes for optimal gameplay.
+4. To switch games, close the game. Then, reopen Game Center and select another.
+
+#### Features
+
+- Includes popular titles like Flappy Bird, Fruit Ninja HD, and Duck Shooter.
+- The game window resizes according to the game's dimensions.
+- Simple and intuitive interface for game selection and play. 
+
 ### YouTube Player
 
 The YouTube player allows users to load and play YouTube videos within the application.
@@ -196,3 +217,5 @@ Each application has its own `.js` file. When an application is opened, its scri
 All assets are owned by me except for the messages icon, desktop background, apple logo in the top left and sound files for messages. All of these are from macOS, and are used purely for educational purposes (fair use). It is to style it to look like macOS running in a browser. 
 
 Sound effects for memory app are taken from youtube.
+
+Games are embedded and source is from https://freehtml5games.org

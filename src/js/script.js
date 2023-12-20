@@ -3,11 +3,13 @@ import {openYouTubeApp} from './youtubePlayer.js';
 import {openChatApp} from './chat.js';
 import {loadMemoryGame} from './memory.js';
 import {openCalculatorApp} from './calculator.js';
+import {openGameSelection} from './gameselector.js';
 import memoryGameIcon from '../img/memory.png';
 import chatIcon from '../img/messages.png';
 import youtubeIcon from '../img/youtube.png';
 import taskManagerIcon from '../img/taskManager.png';
 import calculatorIcon from '../img/calculator.png';
+import gamecenterIcon from '../img/gamecenter.png';
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -22,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
   addListener('youtube-icon', 'Youtube');
   addListener('task-icon', 'Task Manager');
   addListener('calculator-icon', 'Calculator');
+  addListener('gamecenter-icon', 'Game Center');
   /**
    * Adds a click event listener to the element with the specified id.
    * @param {string} id - The id of the element.
@@ -59,6 +62,9 @@ document.addEventListener('DOMContentLoaded', () => {
         break;
       case 'Calculator':
         iconSrc = calculatorIcon;
+        break;
+      case 'Game Center':
+        iconSrc = gamecenterIcon;
         break;
     }
     const desktop = document.getElementById('desktop');
@@ -99,6 +105,17 @@ document.addEventListener('DOMContentLoaded', () => {
         break;
       case 'Calculator':
         openCalculatorApp(contentContainer);
+        windowElement.style.zIndex = ++currentZIndex;
+        updateActiveWindowTitle();
+        break;
+      case 'Game Center':
+        openGameSelection(contentContainer);
+        windowElement.style.height = '580px';
+        windowElement.style.width = '400px';
+        contentContainer.addEventListener('gameSelected', (e) => {
+          windowElement.style.width = e.detail.width + 'px';
+          windowElement.style.height = e.detail.height + 'px';
+        });
         windowElement.style.zIndex = ++currentZIndex;
         updateActiveWindowTitle();
         break;

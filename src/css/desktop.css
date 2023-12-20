@@ -54,6 +54,10 @@ body, html {
     background-image: url('../img/calculator.png');
 }
 
+.icon-gamecenter {
+    background-image: url('../img/gamecenter.png');
+}
+
 
 @keyframes jump {
     0%, 100% {
