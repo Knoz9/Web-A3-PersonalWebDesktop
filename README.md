@@ -33,25 +33,21 @@ The status bar when memory game is open. We are also hovering our mouse over the
 
 <img src="./img/memory_game_screenshot.png" alt="Memory Game Screenshot" width="300">
 
-The Memory Game application.
-
 ### Chat Application
 
 <img src="./img/chat_app_screenshot.png" alt="Chat Application Screenshot" width="300">
-
-The Chat application.
 
 ### Task Manager
 
 <img src="./img/task_manager_screenshot.png" alt="Task Manager Screenshot" width="300">
 
-The Task Manager application.
+### Calculator Application
+
+<img src="./img/calculator_screenshot.png" alt="Task Manager Screenshot" width="300">
 
 ### YouTube Player
 
 <img src="./img/youtube_player_screenshot.png" alt="YouTube Player Screenshot" width="300">
-
-The YouTube Player application.
 
 ## Getting Started
 
@@ -65,7 +61,7 @@ This project runs in the browser, so no special prerequisites are required.
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone
    ```
 2. Open `index.html` in your browser
 
@@ -152,6 +148,25 @@ The task manager provides an overview of all currently open windows in the appli
 - The task manager allows users to close individual windows or all windows of a specific application at once.
 - The task manager remembers the expanded/collapsed state of each application group, so if a group was expanded the last time the task manager was updated, it will remain expanded 
 in the next update.
+
+### Calculator
+
+The Calculator app allows users to perform basic calculations, including addition, subtraction, multiplication, and division, within the application.
+
+#### How to Use
+
+1. Click on the Calculator icon to open the app.
+2. Use the displayed buttons to input numbers and arithmetic operations.
+3. Click on the `=` button to calculate the result. The result will be displayed in the input field at the top of the calculator.
+4. To start a new calculation or clear the current input, click the `C` button.
+
+#### Features
+
+- Supports basic operations including addition (`+`), subtraction (`-`), multiplication (`×`), and division (`÷`).
+- The calculator features a grid of buttons representing digits and operations for easy input.
+- Results are displayed immediately after pressing the `=` button.
+-  Displays an error message in case of invalid input or calculation errors.
+- A 9 character limit is in place to prevent digits from going out of frame
 
 ### YouTube Player
 

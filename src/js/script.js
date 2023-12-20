@@ -2,10 +2,12 @@ import {openTaskManager} from './taskManager.js';
 import {openYouTubeApp} from './youtubePlayer.js';
 import {openChatApp} from './chat.js';
 import {loadMemoryGame} from './memory.js';
+import {openCalculatorApp} from './calculator.js';
 import memoryGameIcon from '../img/memory.png';
 import chatIcon from '../img/messages.png';
 import youtubeIcon from '../img/youtube.png';
 import taskManagerIcon from '../img/taskManager.png';
+import calculatorIcon from '../img/calculator.png';
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -19,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
   addListener('chat-icon', 'Messages');
   addListener('youtube-icon', 'Youtube');
   addListener('task-icon', 'Task Manager');
+  addListener('calculator-icon', 'Calculator');
   /**
    * Adds a click event listener to the element with the specified id.
    * @param {string} id - The id of the element.
@@ -54,6 +57,9 @@ document.addEventListener('DOMContentLoaded', () => {
       case 'Task Manager':
         iconSrc = taskManagerIcon;
         break;
+      case 'Calculator':
+        iconSrc = calculatorIcon;
+        break;
     }
     const desktop = document.getElementById('desktop');
     const windowElement = document.createElement('div');
@@ -88,6 +94,11 @@ document.addEventListener('DOMContentLoaded', () => {
         break;
       case 'Task Manager':
         openTaskManager(contentContainer);
+        windowElement.style.zIndex = ++currentZIndex;
+        updateActiveWindowTitle();
+        break;
+      case 'Calculator':
+        openCalculatorApp(contentContainer);
         windowElement.style.zIndex = ++currentZIndex;
         updateActiveWindowTitle();
         break;

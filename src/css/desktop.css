@@ -31,6 +31,7 @@ body, html {
     border-radius: 10px;
     box-shadow: 0 -2px 10px rgba(0 0 0 / 20%);
     padding: 0 20px; /* Added padding */
+    z-index: 10000;
 }
 
 .icon-memory {
@@ -48,6 +49,11 @@ body, html {
 .icon-taskmanager {
     background-image: url('../img/taskManager.png');
 }
+
+.icon-calculator {
+    background-image: url('../img/calculator.png');
+}
+
 
 @keyframes jump {
     0%, 100% {
@@ -81,7 +87,7 @@ body, html {
   }
   
   .icon-container:hover::after {
-    content: attr(title);
+    content: attr(data-tooltip);
     visibility: visible;
     opacity: 1;
     width: auto;
