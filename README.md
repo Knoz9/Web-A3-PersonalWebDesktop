@@ -1,4 +1,4 @@
-# Web Personal Web Desktop
+# Web Personal Work Desktop
 
 This project is a simple desktop-like interface in the browser where you can open and interact with different applications like a Memory Game, a Chat application, a YouTube player, and a Task Manager.
 
