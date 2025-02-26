@@ -185,7 +185,7 @@ Game Center app is your destination for playing embedded HTML games directly in 
 
 #### Features
 
-- Includes popular titles like Flappy Bird, Fruit Ninja HD, and Duck Shooter.
+- Includes popular titles like Flappy Bird, Mario Forever, and Fruit Ninja.
 - The game window resizes according to the game's dimensions.
 - Simple and intuitive interface for game selection and play. 
 
