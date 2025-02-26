@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
   addListener('youtube-icon', 'Youtube');
   addListener('task-icon', 'Task Manager');
   addListener('calculator-icon', 'Calculator');
+  addListener('gamecenter-icon', 'Game Center');
   /**
    * Adds a click event listener to the element with the specified id.
    * @param {string} id - The id of the element.
