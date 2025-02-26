@@ -7,15 +7,15 @@ export function openGameSelection(container) {
   const flappybirdDescription =
   'Navigate a bird past pipes. ' +
   'A challenging and addictive game.';
-  const fruitninjahdDescription =
+  const marioForeverDescription =  
+  'Run and jump through levels. ' +  
+  'A classic platforming adventure.';
+  const duckshooterDescription =
   'Slice fruits with a blade. ' +
   'A fast-paced action game for reflexes.';
-  const duckshooterDescription =
-  'Shoot ducks rapidly, don’t miss any. ' +
-  'A nostalgic retro-style game.';
-  const flappybird = createGamePreview('Flappy Bird', 'https://freehtml5games.org/icons/flappy-bird.png', 'https://freehtml5games.org/games/flappy-bird/index.html', container, 330, 512, flappybirdDescription);
-  const fruitninjahd = createGamePreview('Fruit Ninja HD', 'https://freehtml5games.org/icons/fruit-ninja-hd.png', 'https://freehtml5games.org/games/fruit-ninja-hd/index.html', container, 640, 540, fruitninjahdDescription);
-  const duckshooter = createGamePreview('Duck Shooter', 'https://freehtml5games.org/icons/duck-shooter.png', 'https://freehtml5games.org/games/duck-shooter/index.html', container, 640, 360, duckshooterDescription);
+  const flappybird = createGamePreview('Flappy Bird', 'https://i.imgur.com/VNRuFiE.png', 'https://scratch.mit.edu/projects/18262469/embed', container, 600, 500, flappybirdDescription);
+  const fruitninjahd = createGamePreview('Mario Forever', 'https://i.imgur.com/lUjUFyG.png', 'https://www.retrogames.cc/embed/45495-mario-forever-smw-edition-v1-6.html', container, 800, 600, marioForeverDescription);
+  const duckshooter = createGamePreview('Fruit Ninja', '//funhtml5games.com/images/fruitninja.png', 'https://funhtml5games.com?embed=fruitninja', container, 750, 500, duckshooterDescription);
 
   // Append previews to the container
   container.appendChild(flappybird);

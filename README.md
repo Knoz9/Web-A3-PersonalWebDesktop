@@ -218,4 +218,4 @@ All assets are owned by me except for the messages icon, desktop background, app
 
 Sound effects for memory app are taken from youtube.
 
-Games are embedded and source is from https://freehtml5games.org
+Games are embedded and source is from https://funhtml5games.org, https://scratch.mit.edu/ & https://www.retrogames.cc/
